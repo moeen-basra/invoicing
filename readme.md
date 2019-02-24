@@ -77,7 +77,7 @@ POST /api/invoices
 
 params = [
   'type_id' => '5', // required
-  'type' => 'lease', // required
+  'type' => 'lease', // required one of lease, property, user
   'status' => 'paid', // optional default pending
   'due_at' => '2019-01-01', // optional default today
   
