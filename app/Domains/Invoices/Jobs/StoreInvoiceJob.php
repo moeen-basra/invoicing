@@ -37,7 +37,7 @@ class StoreInvoiceJob extends Job
         $this->invoice->discount = $discount;
         $this->invoice->total = $price - $discount;
         $this->invoice->status = Arr::get($this->input, 'status') ?? 'pending';
-        $this->invoice->due_at = Carbon::parse(Arr::get($this->input, 'status'));
+        $this->invoice->due_at = Carbon::parse(Arr::get($this->input, 'due_at'));
 
         if (!$this->invoice->save()) {
             // rollback transaction and throw exception

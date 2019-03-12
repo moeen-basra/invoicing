@@ -19,6 +19,7 @@ class ValidateStoreInputJob extends Job
         $rules = [
             'type_id' => 'required',
             'type' => 'required|in:property,lease,user',
+            'due_at' => 'string',
             'details' => 'array|required',
             'details.*.token' => 'required',
             'details.*.content' => 'required',
